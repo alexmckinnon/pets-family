@@ -6,6 +6,8 @@ import store from './store';
 import firebaseConfig from '../config/firebase.js';
 import router from './router'
 
+import '@/assets/css/tailwind.css'
+
 Vue.config.productionTip = false;
 
 firebase.initializeApp(firebaseConfig);
