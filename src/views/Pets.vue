@@ -1,28 +1,40 @@
 <template>
     <div>
-        <h1>Pets of REW</h1>
-        <Pet v-for="(pet, index) in pets" v-bind="pet" :key="index" />
+        <Filters @update-filter="updateFilter"/>
+        <PetGrid :pets="pets"/>
     </div>
 </template>
-
+]
 <script>
-import Pet from '@/components/Pet.vue';
+import Filters from '@/components/Filters.vue';
+import PetGrid from '@/components/PetGrid.vue';
+
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
     components: {
-        Pet
+        PetGrid,
+        Filters
     },
     data: function() {
         return {
+            filter: 'all',
+            pets: []
         }
+    },
+    mounted() {
+        this.pets = this.getPets;
     },
     computed: {
         ...mapGetters([
             'getPets'
-        ]),
-        pets() {
-            return this.getPets;
+        ])
+    },
+    methods: {
+        updateFilter(type) {
+            this.filter = type;
+            this.pets = this.getPets.filter((pet) => (type == 'all') || pet.type == type);
+            this.$nextTick(() => this.$redrawVueMasonry());
         }
     }
 }

@@ -1,16 +1,27 @@
 import Vue from 'vue';
-import * as firebase from "firebase/app";
 import App from './App.vue';
 import store from './store';
+import {VueMasonryPlugin} from 'vue-masonry';
+import router from './router';
 
-import firebaseConfig from '../config/firebase.js';
-import router from './router'
+import '@/assets/css/tailwind.css';
+import 'hint.css'; // hint.css tooltip library
 
-import '@/assets/css/tailwind.css'
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faHeart, faUser, faPaw, faCat, faDog, faCrow } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+library.add(faHeart, faUser, faPaw, faCat, faDog, faCrow);
+Vue.component('font-awesome-icon', FontAwesomeIcon);
+
+Vue.use(VueMasonryPlugin)
 
 Vue.config.productionTip = false;
 
-firebase.initializeApp(firebaseConfig);
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title
+  next()
+})
 
 new Vue({
   store,

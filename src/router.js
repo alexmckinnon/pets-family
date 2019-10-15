@@ -11,17 +11,20 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Pets
+      component: Pets,
+      meta: { title: process.env.VUE_APP_TITLE }
     },
     {
       path: '/pets',
       name: 'pets',
-      component: Pets
+      component: Pets,
+      meta: { title: process.env.VUE_APP_TITLE }
     },
     {
       path: '*',
       name: 'fallback',
-      component: Pets
+      component: Pets,
+      meta: { title: process.env.VUE_APP_TITLE }
     },
   ]
 })
