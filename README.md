@@ -1,29 +1,10 @@
-# petsofrew
+# Pets Family
 
-## Project setup
-```
-npm install
-```
+Inspired by [petsofnetlify](https://github.com/netlify/petsofnetlify)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Work in progress
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Stable release coming soon.
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Demo
+Latest build deployed on Netlify: [nostalgic-shockley-a858fd.netlify.com](https://nostalgic-shockley-a858fd.netlify.com/)
