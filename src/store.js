@@ -13,7 +13,9 @@ export default new Vuex.Store({
     getters: {
         getPets: state => {
             return [
-                {type: 'cat', name: 'Sprite', image: 'img src'}
+                {type: 'cat', name: 'Sprite', image: 'sprite.jpg', background: 'blue'},
+                {type: 'cat', name: 'Quinn', image: 'quinn.jpg', background: 'pink'},
+                {type: 'cat', name: 'Panther', image: 'panther.jpg', background: 'orange'},
             ]
         }
     },
