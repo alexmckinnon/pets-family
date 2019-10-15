@@ -16,6 +16,7 @@ export default new Vuex.Store({
                 {type: 'cat', name: 'Sprite', image: 'sprite.jpg', background: 'blue'},
                 {type: 'cat', name: 'Quinn', image: 'quinn.jpg', background: 'pink'},
                 {type: 'cat', name: 'Panther', image: 'panther.jpg', background: 'orange'},
+                {type: 'dog', name: 'Burt', image: 'burt.jpg', background: 'violet'},
             ]
         }
     },
