@@ -18,7 +18,19 @@
 <script>
 
 export default {
-    props: ['type', 'name', 'image'],
+    props: ['type', 'name', 'image','background'],
+    data: () => {
+        return {
+            backgroundColors: {
+                violet: 'bg-custom-violet',
+                blue: 'bg-custom-blue',
+                green: 'bg-custom-green',
+                yellow: 'bg-custom-yellow',
+                orange: 'bg-custom-orange',
+                pink: 'bg-custom-pink',
+            }
+        }
+    },
     computed: {
         width() {
             return (Math.round(Math.random()) == 1) ? '400' : '200';
@@ -27,19 +39,7 @@ export default {
            return '../assets/images/' + this.image;
         },
         bgColor() {
-            let colors = [
-                'bg-custom-violet',
-                'bg-custom-blue',
-                'bg-custom-green',
-                'bg-custom-yellow',
-                'bg-custom-orange',
-                'bg-custom-pink',
-                'bg-custom-violet',
-                'bg-custom-blue',
-                'bg-custom-blue',
-                'bg-custom-blue'
-            ];
-            return colors[Math.floor(Math.random() * 10)];
+            return this.backgroundColors[this.background];
         }
     }
 }
