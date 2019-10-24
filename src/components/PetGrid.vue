@@ -3,13 +3,13 @@
         <div v-if="!pets.length" class="w-full text-center">
             No pets found.
         </div>
-        <div v-masonry class="flex flex-wrap overflow-hidden text-center -mx-2">
+        <div v-masonry class="flex flex-wrap text-center -mx-2">
             <Pet
                 v-masonry-tile
                 v-for="(pet, index) in pets"
                 :key="index"
                 v-bind="pet"
-                class="item my-2 px-2 lg:w-1/6 md:w-1/4 sm:w-1/3 w-1/2"
+                class="item m-2 lg:w-1/6 md:w-1/4 sm:w-1/3 w-1/2"
             />
         </div>
     </div>
