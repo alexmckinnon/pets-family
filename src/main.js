@@ -6,6 +6,7 @@ import router from './router';
 
 import '@/assets/css/tailwind.css';
 import 'hint.css'; // hint.css tooltip library
+import '@/assets/css/app.css';
 
 
 import { library } from '@fortawesome/fontawesome-svg-core';
