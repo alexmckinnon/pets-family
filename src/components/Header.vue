@@ -1,7 +1,7 @@
 <template>
     <div class="flex items-center justify-between flex-wrap bg-custom-blue p-2">
         <div class="flex items-center flex-shrink-0 text-white mr-6">
-            <span class="font-semibold text-2xl tracking-tight">
+            <span class="font-happy-monkey font-semibold text-2xl tracking-tight">
                 <router-link to="/"><font-awesome-icon icon="paw" /> {{ title }}</router-link>
             </span>
         </div>
