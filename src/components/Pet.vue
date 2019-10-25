@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="pet__body rounded-lg overflow-hidden text-white shadow-lg cursor-pointer">
+        <div class="pet__body m-2 rounded-lg overflow-hidden text-white shadow-lg cursor-pointer relative">
             <img class="mx-auto w-full" :src="image" >
             <div class="pet__info px-3 py-1 rounded-b-lg" :class="bgColor">
                 <div class="font-happy-monkey font-bold text-xl">{{ name }}</div>

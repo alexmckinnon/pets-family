@@ -9,7 +9,7 @@
                 v-for="(pet, index) in pets"
                 :key="index"
                 v-bind="pet"
-                class="item m-2 lg:w-1/6 md:w-1/4 sm:w-1/3 w-1/2"
+                class="item lg:w-1/5 md:w-1/3 sm:w-1/2 w-full"
             />
         </div>
     </div>
