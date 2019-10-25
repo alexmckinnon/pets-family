@@ -1,11 +1,11 @@
 <template>
-    <div class="flex items-center justify-between flex-wrap bg-custom-blue p-2">
+    <div class="flex items-center justify-between flex-wrap p-2 bg-blue-to-purple">
         <div class="flex items-center flex-shrink-0 text-white mr-6">
             <span class="font-happy-monkey font-semibold text-2xl tracking-tight">
                 <router-link to="/"><font-awesome-icon icon="paw" /> {{ title }}</router-link>
             </span>
         </div>
-        <a href="#" class="text-sm px-4 py-2 leading-none border rounded text-white border-white hover:text-teal-500 hover:bg-white">Sign in</a>
+        <a href="#" class="text-sm px-4 py-2 leading-none border rounded text-white border-white hover:text-custom-violet hover:bg-white">Sign in</a>
     </div>
 </template>
 

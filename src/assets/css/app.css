@@ -8,3 +8,8 @@ html, body {
 .font-happy-monkey {
     font-family: 'Happy Monkey', cursive;
 }
+
+.bg-blue-to-purple {
+    background: rgb(0,167,234);
+    background: linear-gradient(90deg, rgba(0,167,234,1) 0%, rgba(119,52,234,1) 100%);
+}
