@@ -1,6 +1,6 @@
 <template>
     <button
-        class="hover:bg-custom-blue hover:text-white rounded-full mx-2 hint--top"
+        class="hover:bg-custom-blue hover:text-white rounded-full mx-2 hint--top hint--no-animate hint--rounded"
         :class="{'bg-custom-blue text-white': isActive}"
         @click.prevent="handleClickFilter"
         :aria-label="type">
