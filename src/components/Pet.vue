@@ -2,11 +2,12 @@
     <div>
         <div class="pet__body m-2 rounded-lg overflow-hidden text-white shadow-lg cursor-pointer relative">
             <img class="mx-auto w-full" :src="image" >
-            <div class="pet__info px-3 py-1 rounded-b-lg" :class="bgColor">
-                <div class="font-happy-monkey font-bold text-xl">{{ name }}</div>
-                <p class="pet__details">
+            <div class="pet__info font-happy-monkey px-3 py-1" :class="[bgColor, infoPosition]">
+                <p class="font-bold text-xl">{{ name }}</p>
+                <div class="pet__details">
+                    <p class="text-sm mb-2">{{ description }}</p>
                     <font-awesome-icon :icon="type" class="text-xl mx-2" />
-                </p>
+                </div>
             </div>
         </div>
     </div>
@@ -15,7 +16,6 @@
 <style scoped>
 .pet__info {
     position: absolute;
-    bottom: 0;
     opacity: 0.9;
     width: 100%;
     overflow: hidden;
@@ -37,7 +37,7 @@
 <script>
 
 export default {
-    props: ['type', 'name', 'image','background'],
+    props: ['type', 'name', 'position', 'description', 'image', 'background'],
     data: () => {
         return {
             backgroundColors: {
@@ -59,7 +59,11 @@ export default {
         },
         bgColor() {
             return this.backgroundColors[this.background];
+        },
+        infoPosition() {
+            return this.position + '-0';
         }
+
     }
 }
 </script>

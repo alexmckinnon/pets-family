@@ -13,10 +13,10 @@ export default new Vuex.Store({
     getters: {
         getPets: state => {
             return [
-                {type: 'cat', name: 'Sprite', image: 'sprite.jpg', background: 'blue'},
-                {type: 'cat', name: 'Quinn', image: 'quinn.jpg', background: 'pink'},
-                {type: 'cat', name: 'Panther', image: 'panther.jpg', background: 'orange'},
-                {type: 'dog', name: 'Burt', image: 'burt.jpg', background: 'violet'},
+                {type: 'cat', name: 'Sprite', position: 'bottom', description: 'Big Guy! Loves warm places, being carried, and cuddling on your lap', image: 'sprite.jpg', background: 'blue'},
+                {type: 'cat', name: 'Quinn', position: 'top', description: 'Little Bear! The sweetest little girl <3', image: 'quinn.jpg', background: 'pink'},
+                {type: 'cat', name: 'Panther', position: 'top', description: 'Wittle Guy! Always caught with his tongue out.', image: 'panther.jpg', background: 'orange'},
+                {type: 'dog', name: 'Burt', position: 'bottom', description: 'Burt Dog <3', image: 'burt.jpg', background: 'violet'},
             ]
         }
     },
